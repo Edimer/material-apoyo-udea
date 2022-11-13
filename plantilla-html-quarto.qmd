@@ -1,0 +1,61 @@
+---
+title: "Título"
+subtitle: "Subtítulo"
+author: "Autor"
+date: "`r Sys.Date()`"
+format: 
+  html:
+    toc: true
+    toc-title: "Tabla de contenido"
+    smooth-scroll: true
+    code-fold: true
+    df-print: paged
+    toc-location: left
+    number-depth: 4
+    theme:
+      light: cosmo
+      dark: darkly
+    code-copy: true
+    highlight-style: github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+# Símbolos
+
+- [Lista de símbolos en LaTeX](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
+
+$$\alpha\ \omega\ \mu\ ...$$
+
+# Imágenes
+
+- [Más información de figuras e imágenes](https://quarto.org/docs/authoring/figures.html)
+
+::: {layout-ncol=2}
+![Imagen izquierda](https://www.adslzone.net/app/uploads-adslzone.net/2021/08/IA-1.jpg)
+
+![Imagen derecha](https://ahoraeducacion.com/wp-content/uploads/2022/01/data.jpeg)
+:::
+
+# Hipervínculos
+
+- [Página web curso U de A](https://rproject-udea.netlify.app/example_guide/)
+- <https://rproject-udea.netlify.app/example_guide/>
+
+# Interoperabilidad
+
+- Creamos una variable en python:
+
+```{python}
+mi_variable = [1, 2, 3]
+print(mi_variable)
+```
+
+- Ahora usamos esa variable desde R para acceder a la variable creada en python:
+
+```{r}
+library(reticulate)
+py$mi_variable 
+```
